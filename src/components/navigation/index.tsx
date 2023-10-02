@@ -7,7 +7,7 @@ import {
   MenuItem,
   NavigationWrapper,
   Avatar,
-  StyledImage,
+  LogoIcon,
 } from "./style";
 
 interface NavigationProps {}
@@ -28,12 +28,7 @@ const Navigation: React.FC<NavigationProps> = () => {
       <Nav>
         <Logo>
           <Avatar onClick={() => navigateHome()}>
-            <div>
-              <StyledImage
-                src="https://avatars.githubusercontent.com/u/47534735?s=400&u=fa878ac2ddd4f092096a03f9ee7b5715c2504fcc&v=4"
-                alt="Avatar image"
-              />
-            </div>
+            <LogoIcon>🌸</LogoIcon>
             <div>Asim Veledarevic</div>
           </Avatar>
         </Logo>
