@@ -35,11 +35,8 @@ export const Logo = styled.div`
   color: ${(props) => props.theme.colors.text};
 `;
 
-export const StyledImage = styled.img`
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
+export const LogoIcon = styled.div`
+  font-size: 32px;
 `;
 
 export const Avatar = styled.div`
