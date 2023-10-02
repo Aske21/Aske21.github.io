@@ -1,0 +1,94 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Monaco", monospace;
+  overflow: hidden;
+}
+
+body {
+  color: #333;
+}
+
+body {
+  background-color: #232634;
+}
+
+a {
+  text-decoration: none;
+  color: #aa84a9;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #8e679b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+header {
+  text-align: center;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #aa84a9;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8e679b;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
