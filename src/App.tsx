@@ -4,7 +4,6 @@ import Introduction from "./components/introduction";
 import { AppContainer, Wrapper } from "./utils/theme/wrappers";
 import Work from "./components/work";
 import Portofolio from "./components/portoflio";
-import Contact from "./components/contact";
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
         <Greetings />
         <Work />
         <Portofolio />
-        <Contact />
+        {/* <Contact /> */}
       </Wrapper>
     </AppContainer>
   );

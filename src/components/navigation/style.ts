@@ -67,16 +67,20 @@ export const Menu = styled.ul<MenuProps>`
   list-style: none;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media (max-width: 768px) {
+    gap: 16px;
+    font-size: 28px;
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: ${({ isOpen }) => (isOpen ? "0" : "-200px")};
+    right: ${({ isOpen }) => (isOpen ? "0" : "-110vw")};
     background-color: #232634;
     transition: right 0.3s ease-in-out;
-    width: 200px;
+    width: 100vw;
     padding: 20px;
+    height: 100vh;
     box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
@@ -84,6 +88,25 @@ export const Menu = styled.ul<MenuProps>`
 
 export const MenuItem = styled.li`
   margin-right: 20px;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f8bbd0;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
     margin: 10px 0;
   }
