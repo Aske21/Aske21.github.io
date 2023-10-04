@@ -23,8 +23,17 @@ export const Picture = styled.img`
   border-radius: 50%;
   width: 96%;
   height: 100px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 185px;
+  }
 `;
 
 export const IntroductionContent = styled(FlexRow)`
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+  }
 `;
