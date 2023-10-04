@@ -38,7 +38,6 @@ const Navigation: React.FC<NavigationProps> = () => {
           <div></div>
         </MenuButton>
         <Menu isOpen={isMenuOpen}>
-          <MenuItem>Home</MenuItem>
           <MenuItem>About</MenuItem>
           <MenuItem>Services</MenuItem>
           <MenuItem>Contact</MenuItem>

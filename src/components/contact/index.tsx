@@ -1,12 +1,17 @@
 import React from "react";
-import { ContactWrapper, ContactHeading } from "./style";
+import { ContactSection, ContactHeading, ContactLink } from "./style";
 
 const Contact: React.FC = () => {
   return (
-    <ContactWrapper>
-      <ContactHeading>Contact</ContactHeading>
-      Coming soon...
-    </ContactWrapper>
+    <ContactSection>
+      <ContactHeading>Contact Me</ContactHeading>
+      <p>
+        Feel free to reach out to me via email:{" "}
+        <ContactLink href="mailto:your.email@example.com">
+          your.email@example.com
+        </ContactLink>
+      </p>
+    </ContactSection>
   );
 };
 
