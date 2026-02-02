@@ -2,26 +2,35 @@ import { styled, keyframes } from "styled-components";
 
 export const blinkCursor = keyframes`
   0%, 100% {
-    border-right: 2px solid transparent;
+    opacity: 1;
   }
   50% {
-    border-right: 2px solid white;
+    opacity: 0;
   }
 `;
 
 export const StyledDiv = styled.div`
-  background-color: ${(props) => props.theme.colors.light};
+  background-color: transparent;
   color: ${(props) => props.theme.colors.text};
-  padding: 20px;
-  margin: 20px;
-  margin-top: 0px;
-  border-radius: 5px;
-  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: ${(props) => props.theme.fonts.body};
+  white-space: pre-wrap;
+  line-height: 1.8;
+  
+  &::before {
+    content: "aske21@github ➜ ~ ";
+    color: ${(props) => props.theme.colors.mauve};
+    margin-right: 8px;
+    display: inline-block;
+  }
+  
   &:after {
-    content: "|";
+    content: "█";
     display: inline-block;
     vertical-align: bottom;
-    margin-left: 5px;
+    margin-left: 2px;
+    color: ${(props) => props.theme.colors.mauve};
     animation: ${blinkCursor} 1s step-end infinite;
   }
 `;

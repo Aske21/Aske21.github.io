@@ -1,20 +1,17 @@
 import Greetings from "./components/greetings";
-import Navigation from "./components/navigation";
-import Introduction from "./components/introduction";
+import Interests from "./components/interests";
+import Blog from "./components/blog";
+import Contact from "./components/contact";
 import { AppContainer, Wrapper } from "./utils/theme/wrappers";
-import Work from "./components/work";
-import Portofolio from "./components/portoflio";
 
 function App() {
   return (
     <AppContainer>
-      <Navigation />
       <Wrapper>
-        <Introduction />
         <Greetings />
-        <Work />
-        <Portofolio />
-        {/* <Contact /> */}
+        <Interests />
+        <Blog />
+        <Contact />
       </Wrapper>
     </AppContainer>
   );

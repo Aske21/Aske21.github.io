@@ -1,17 +1,33 @@
 import React from "react";
-import { ContactSection, ContactHeading, ContactLink } from "./style";
+import TerminalCommand from "../terminal-command";
+import { ContactInfo, ContactLink } from "./style";
 
 const Contact: React.FC = () => {
   return (
-    <ContactSection>
-      <ContactHeading>Contact Me</ContactHeading>
-      <p>
-        Feel free to reach out to me via email:{" "}
-        <ContactLink href="mailto:your.email@example.com">
-          your.email@example.com
-        </ContactLink>
-      </p>
-    </ContactSection>
+    <TerminalCommand command="cat contact.txt">
+      <ContactInfo>
+        <div>
+          GitHub:{" "}
+          <ContactLink
+            href="https://github.com/Aske21"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Aske21
+          </ContactLink>
+        </div>
+        <div>
+          LinkedIn:{" "}
+          <ContactLink
+            href="https://www.linkedin.com/in/asim-veledarevic/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            asim-veledarevic
+          </ContactLink>
+        </div>
+      </ContactInfo>
+    </TerminalCommand>
   );
 };
 

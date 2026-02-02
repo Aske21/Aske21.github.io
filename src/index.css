@@ -11,32 +11,43 @@ ol,
 li {
   margin: 0;
   padding: 0;
-  color: white;
+  color: #cdd6f4;
 }
 
 body {
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: "Monaco", monospace;
-  overflow: hidden;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: "JetBrains Mono", "Fira Code", "Monaco", "Courier New", monospace;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  color: #333;
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 }
 
-body {
-  background-color: #232634;
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 
 a {
   text-decoration: none;
-  color: #aa84a9;
+  color: #89b4fa;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #8e679b;
+  color: #b4befe;
 }
 
 * {
@@ -52,32 +63,37 @@ header {
 }
 
 img {
-  border: 1px solid #ddd;
+  border: 1px solid #45475a;
   border-radius: 4px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea,
-button {
+textarea {
   display: block;
   width: 100%;
   padding: 8px;
   margin-bottom: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #45475a;
   border-radius: 4px;
+  background-color: #313244;
+  color: #cdd6f4;
+  font-family: "JetBrains Mono", "Fira Code", "Monaco", "Courier New", monospace;
 }
 
 button {
-  background-color: #aa84a9;
-  color: #fff;
+  background-color: #313244;
+  color: #cdd6f4;
+  border: 1px solid #45475a;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #8e679b;
+  background-color: #45475a;
+  border-color: #89b4fa;
+  color: #89b4fa;
 }
 
 .center {

@@ -1,22 +1,12 @@
 import styled from "styled-components";
 
-export const ContactInfo = styled.div`
-  color: ${(props) => props.theme.colors.text};
-  font-family: ${(props) => props.theme.fonts.body};
-  line-height: 1.8;
-  font-size: 1em;
-
-  @media (max-width: 768px) {
-    line-height: 1.7;
-  }
-`;
-
-export const ContactLink = styled.a`
+export const SocialLink = styled.a`
   color: ${(props) => props.theme.colors.blue};
   text-decoration: none;
   font-family: ${(props) => props.theme.fonts.body};
   transition: color 0.3s ease;
-  font-size: 1em;
+  font-size: 16px;
+  display: inline;
 
   &:hover {
     color: ${(props) => props.theme.colors.lavender};
