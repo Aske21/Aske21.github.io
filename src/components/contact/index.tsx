@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            asim-veledarevic
+            Asim Veledarevic
           </ContactLink>
         </div>
       </ContactInfo>
