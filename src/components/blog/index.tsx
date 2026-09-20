@@ -1,15 +1,37 @@
 import React from "react";
 import TerminalCommand from "../terminal-command";
-import { BlogInfo } from "./style";
+import { getAllPosts } from "../../utils/blog/posts";
+import {
+  BlogInfo,
+  PostPreview,
+  PostLink,
+  PostDate,
+  PostExcerpt,
+  ViewAllLink,
+} from "./style";
+
+const PREVIEW_COUNT = 3;
 
 const Blog: React.FC = () => {
+  const posts = getAllPosts().slice(0, PREVIEW_COUNT);
+
   return (
     <TerminalCommand command="ls blog/">
       <BlogInfo>
-        <div>Coming soon...</div>
-        <div style={{ marginTop: "8px", fontSize: "14px", color: "#a6adc8" }}>
-          Blog posts will appear here in the future
-        </div>
+        {posts.length === 0 ? (
+          <div>No posts yet — check back soon.</div>
+        ) : (
+          <>
+            {posts.map((post) => (
+              <PostPreview key={post.slug}>
+                <PostLink to={`/blog/${post.slug}`}>{post.title}</PostLink>
+                <PostDate>{post.date}</PostDate>
+                {post.excerpt && <PostExcerpt>{post.excerpt}</PostExcerpt>}
+              </PostPreview>
+            ))}
+            <ViewAllLink to="/blog">View all posts &rarr;</ViewAllLink>
+          </>
+        )}
       </BlogInfo>
     </TerminalCommand>
   );

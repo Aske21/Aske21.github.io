@@ -1,17 +1,20 @@
-import Greetings from "./components/greetings";
-import Interests from "./components/interests";
-import Blog from "./components/blog";
-import Contact from "./components/contact";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import BlogList from "./pages/BlogList";
+import BlogPost from "./pages/BlogPost";
+import NotFound from "./pages/NotFound";
 import { AppContainer, Wrapper } from "./utils/theme/wrappers";
 
 function App() {
   return (
     <AppContainer>
       <Wrapper>
-        <Greetings />
-        <Interests />
-        <Blog />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </Wrapper>
     </AppContainer>
   );
