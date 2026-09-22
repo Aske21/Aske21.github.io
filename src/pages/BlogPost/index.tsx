@@ -3,11 +3,18 @@ import { useParams } from "react-router-dom";
 import TerminalCommand from "../../components/terminal-command";
 import { getPostBySlug } from "../../utils/blog/posts";
 import { markdown } from "../../utils/blog/markdown";
+import { usePageMeta } from "../../utils/seo/usePageMeta";
 import { PostMeta, MarkdownBody, NotFoundText, BackLink } from "./style";
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
+
+  usePageMeta({
+    title: post ? `${post.title} — Asim Veledarevic` : "Post not found — Asim Veledarevic",
+    description: post?.excerpt || "This blog post could not be found.",
+    path: `/blog/${slug ?? ""}`,
+  });
 
   if (!post) {
     return (
